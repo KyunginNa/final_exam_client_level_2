@@ -30,4 +30,21 @@ describe('User can view courses by a category', () => {
       cy.get('div').should('not.contain', 'Work The Web')
     })
   })
+
+  describe('When user clicks "All"', () => {
+    beforeEach(() => {
+      cy.get('[data-cy="all"]').click()
+    })
+
+    it('User can see a list of all courses', () => {
+      cy.get('[data-cy="app"]')
+        .should('contain', 'Work The Web')
+        .and('contain', 'Test Automation using Cypress')
+        .and('contain', 'Introduction to VUE3')
+        .and('contain', 'Building Web Applications using VUE 3')
+        .and('contain', 'Version Control with Git')
+        .and('contain', 'API development with NodeJS')
+        .and('contain', 'ReactJs - Getting Started (2020 edition)')
+    })
+  })
 })

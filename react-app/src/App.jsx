@@ -61,6 +61,11 @@ const App = () => {
       <div data-cy='app'>
         <h1>Course list</h1>
         <ul data-cy='category-list'>
+          <li
+            data-cy='all'
+            onClick={() => setFilteredResult()}
+          >All
+          </li>
           {categoryList}
         </ul>
         {filteredResult ?

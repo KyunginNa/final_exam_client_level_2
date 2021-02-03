@@ -32,8 +32,6 @@ ul {
   list-style: none;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-weight: bold;
-  text-transform: capitalize;
 }
 
 ul li {

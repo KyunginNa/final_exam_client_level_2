@@ -48,6 +48,7 @@ const App = () => {
   let categoryList = uniqueCategories.map(category => {
     return (
       <li
+        className='bold capitalized'
         key={category}
         data-cy={category}
         onClick={() => hideCourses(courseDetails, category)}
@@ -59,11 +60,12 @@ const App = () => {
   return (
     <>
       <div data-cy='app'>
-        <h1>Course list</h1>
-        <ul data-cy='category-list'>
+        <h1 className='center'>Course list</h1>
+        <ul data-cy='category-list' className='center'>
           <li
             data-cy='all'
             onClick={() => setFilteredResult()}
+            className='bold capitalized'
           >All
           </li>
           {categoryList}

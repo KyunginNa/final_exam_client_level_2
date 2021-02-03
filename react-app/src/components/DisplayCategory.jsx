@@ -3,12 +3,23 @@ import courses from '../data/courses'
 
 const DisplayCategory = () => {
 
-  let categoryList = courses.map(course => {
-    return <li>{course.category}</li>
+  const pluck = (array, key) => {
+    let pluckedArray = []
+    array.map(item => {
+      if (item.hasOwnProperty(key)) {
+        pluckedArray.push(item[key])
+      }
+    })
+    return pluckedArray
+  }
+
+  let uniqueCategories = pluck(courses, 'category').filter((value, index, array) => array.indexOf(value) === index)
+  let categoryList = uniqueCategories.map(category => {
+    return <li>{category}</li>
   })
-  
+
   return (
-    <ul>
+    <ul data-cy='category-list'>
       {categoryList}
     </ul>
   )

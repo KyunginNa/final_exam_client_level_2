@@ -9,7 +9,11 @@ describe('User can view the structure of the main page', () => {
     })
   })
 
-  it('User can see the category list', () => {
+  it('User can see the list of categories', () => {
+    cy.get('ul li').its('length').should('eq', 6)
+  })
+
+  it('User can see each category name', () => {
     cy.get('[data-cy="app"]').within(() => {
       cy.get('ul')
         .should('contain', 'workshops')

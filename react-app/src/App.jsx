@@ -8,10 +8,19 @@ const App = () => {
       <div>
         <h2>{course.title}</h2>
         <p>{course.description}</p>
-        <p>{course.category}</p>
-        <p>{course.instructors}</p>
+        <p className='capitalized'>
+          <span className='bold'>Category: </span>
+          {course.category}
+        </p>
+        <p>
+          <span className='bold'>Instructors: </span>
+          {course.instructors}
+        </p>
         <p>{course.info}</p>
-        <p>{course.price}</p>
+        <p>
+          <span className='bold'>Price: </span>
+          {course.price}
+        </p>
       </div>
     )
   })

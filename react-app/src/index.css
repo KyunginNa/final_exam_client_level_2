@@ -1,0 +1,60 @@
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  color: #444;
+  font-family: 'gotham-light', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial',
+    sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #f28e24;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #444444;
+  margin-top: 2rem;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+ul li {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.container {
+  padding: 2rem 1.1rem;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
